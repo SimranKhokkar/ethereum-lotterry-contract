@@ -24,7 +24,7 @@ const gasEstimate = web3.eth.estimateGas({data: '0x' + bytecode });
 const contract = web3.eth.contract(abi);
 
 // unlock the local ethereum account with the duration for which the account should be unlocked
-// web3.personal.unlockAccount("0x15ccc38776d61c6d5a3ebf2237a70af5b070d52c", "", 5);
+// web3.personal.unlockAccount("0x****************************************", "", 5);
 
 /**
  * This function deploys Inbox.sol contract on blockcahin
@@ -34,7 +34,7 @@ const contract = web3.eth.contract(abi);
  */
 
  // if gas estimate is not provided, it takes some random value which might be more than the gas that is required
- contract.new({data: '0x' + bytecode, from: "0x15ccc38776d61c6d5a3ebf2237a70af5b070d52c", gas: gasEstimate}, (err,res) => {
+ contract.new({data: '0x' + bytecode, from: "0x****************************************", gas: gasEstimate}, (err,res) => {
 if(err) {
     console.log(err);
     return;
